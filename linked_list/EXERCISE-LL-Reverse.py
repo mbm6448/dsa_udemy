@@ -108,24 +108,37 @@ class LinkedList:
         temp.next = None
         self.length -= 1
         return temp
+    def reverse(self):
+        # S.B. : This has to be done in place, also
+        # suing other methods is not allowed
 
-    ## WRITE REVERSE METHOD HERE ##
-    #                             #
-    #                             #
-    #                             #
-    #                             #
-    ###############################
-  
-
-
+        # # using other methods 
+        # # this is O(n^2), terrible!
+        # if self.length == None:
+        #     return None # returning a node
+        # for i in range(self.length):
+        #     self.insert(i,self.pop().value) 
+        # return True
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        after = temp.next
+        before = None
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before 
+            before = temp
+            temp = after
+        return True
 
 my_linked_list = LinkedList(1)
-my_linked_list.append(2)
-my_linked_list.append(3)
-my_linked_list.append(4)
+my_linked_list.append(0)
+my_linked_list.append(8)
+my_linked_list.append(12)
 
 print('LL before reverse():')
 my_linked_list.print_list()
+
 
 my_linked_list.reverse()
 
