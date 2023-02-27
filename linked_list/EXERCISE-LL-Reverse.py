@@ -113,7 +113,7 @@ class LinkedList:
         # using other methods is not allowed
 
         # # using other methods 
-        # # this is O(n^2), terrible!
+       
         # if self.length == None:
         #     return None # returning a node
         # for i in range(self.length):
