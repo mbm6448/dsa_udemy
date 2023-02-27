@@ -110,7 +110,7 @@ class LinkedList:
         return temp
     def reverse(self):
         # S.B. : This has to be done in place, also
-        # suing other methods is not allowed
+        # using other methods is not allowed
 
         # # using other methods 
         # # this is O(n^2), terrible!
